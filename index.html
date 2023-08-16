@@ -1,0 +1,212 @@
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Hind&family=Kalam&family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >   
+        <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Hind&family=Kalam&family=Satisfy&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section id="Home">
+        <div class="hero">
+            <nav>
+                <h2 class="logo">Port<span>folio</span></h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#Certificate">Certificates</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                </ul>
+
+
+                <a href="#contact" class="btn"> Contact</a>
+            </nav>
+            <div class="content">
+                <h4>Hello, This is</h4>
+                <h1>Vishnu <span>k </span></h1>
+                <h3>I am a B.tech IT student.</h3>
+                <div class="newsletter">
+                    <form>
+                        <input type="email" name="email" id="mail " placeholder="Enter your Email">
+                        <input type="submit " name="submit" value="Let's Start">
+                    </form>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section id="about">
+            <div class="service">
+            <div class="main">
+                <img src="2.png" >
+                <div class="about-text">
+                    <h2>About me</h2>
+                    <h5>Developer <span>& Designer</span></h5>
+                    <p>I am an engineering student pursuing B.Tech degree in the field of Information Technology.
+                        Currently i am studying my Third year of my Four year degree Course in University College of Engineering, BIT-Campus, Trichy.
+                        It is a constituent college of Anna University, Chennai and affiliated to the same university.
+                    
+
+                        <button type="button">Lets Talk</button>
+                    </p>
+                </div>
+
+                </div>
+            </div>
+        </section>
+        <!--service start-->
+        <section id="skills">
+        <div class="service">
+            <div class="title">
+                <h2>Skills <span>& Projects</span> </h2>
+            </div>
+            <div class="box">
+                <div class="card1">
+                <h5 style="color:#f9004d;">My skills</h5><br>
+                    
+                    <div class="skl">
+                        
+                    <p>Java</p>
+                    <img src="java.png" style="height: 50px;width: 50px;">
+                    <progress id="file" value="82" max="100"></progress><br><br>
+                    <p>C</p>
+                    <img src="c.jpg" style="height: 50px;width: 50px;">
+                    <progress id="file" value="78" max="100"></progress><br><br>
+                    <p>Python</p>
+                    <img src="python.jpg" style="height: 50px;width: 50px;">
+                    <progress id="file" value="87" max="100"></progress><br><br>
+                    <p>HTML, CSS</p>
+                    <img src="html.png" style="height: 50px;width: 50px;">
+                    <progress id="file" value="92" max="100"></progress><br><br>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    
+                    <div class="card">
+                        <h5 style="color:#f9004d;">Projects</h5><br>
+                        <div class="pro">
+                        <ul>
+                            <li>A Website for my department including the academic reports and profile of all the students</li>
+                            <li>Developed an application for Library Management System using Visual Basic</li>
+                        </ul>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+        
+        <div class="container">
+          <div id="newtask">
+              <input type="text" placeholder="Add Tasks">
+              <button id="push">Add</button>
+          </div>
+          <div id="tasks"></div>
+      </div>
+      <script>
+
+   
+        document.querySelector('#push').onclick = function(){
+          if(document.querySelector('#newtask input').value.length == 0){
+              alert("Kindly Enter Task Name!!!!")
+          }
+      
+          else{
+              document.querySelector('#tasks').innerHTML += `
+                  <div class="task">
+                      <span id="taskname">
+                          ${document.querySelector('#newtask input').value}
+                      </span>
+                      <button class="delete">
+                          <i class="far fa-trash-alt"></i>
+                      </button>
+                  </div>
+              `;
+      
+              var current_tasks = document.querySelectorAll(".delete");
+              for(var i=0; i<current_tasks.length; i++){
+                  current_tasks[i].onclick = function(){
+                      this.parentNode.remove();
+                  }
+              }
+          }
+    
+    } 
+    </script>
+
+
+
+
+        <section id="Certificate">
+        <div class="service">
+            <center><h1>Certi<span>fication</span></h1><br></center>
+
+            <div class="contact-me">
+                <ul>
+                    <li>Certificate for the completion of MS-Office course in TN-Naan Mudhalvan</li>
+                    <li>Certificate for the completion of Network Essentials course in Cisco Academy under TN-Naan Mudhalvan</li>
+                    <li>Completed a Java online course in Great Learning Platform</li>
+                    <li>Completed a online course in Pantech E-learning</li>
+                    <li>Completed a web development online course in Smart Knower</li>
+
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section id="resume">
+        <div class="service">
+           <center> <h1>Res<span>ume</span></h1><br>
+
+             <div class="res">
+                <p>Click the below button download my resume.......</p><br>
+                <div class="bttn" onclick="window.location.href='#';">
+                    <div class="im">
+                    <div class="co">
+                        <p style="text-align: center;">
+                            <br>
+                        <i class="fa-solid fa-download"></i>
+                        
+                        <a class="button" href="#"><span>download</span></a>
+                    </p>
+                
+                </div>
+                </div>
+                </div>
+            </center>
+        </section>
+        <section id="contact">
+        <div class="service">
+           <center> <h1>Contact<span> Me</span></h1></center>
+            <div class="con">
+            <i class="fa-solid fa-envelope"></i>
+            <p><span>Email    :</span>vk@gmail.com</p>
+            <br>
+            <i class="fas fa-phone"></i>
+            <p><span>Phone    :</span>9865766421</p>
+            <br>
+            <i class= "fa-brands fa-instagram"></i>
+
+            <p><span>Instagram:</span>vk</p>
+            <br>
+            <i class= "fa-brands fa-linkedin"></i>
+
+            <p><span>Linked In:</span>vishnu</p>
+            <br>
+            <i class= "fa-solid fa-location-dot"></i>
+
+            <p><span>Locaion:</span>pudukkottai</p>
+            
+
+            
+        </div>
+        </div>
+        </section>
+    </body>
+</html>
